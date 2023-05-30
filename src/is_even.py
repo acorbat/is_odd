@@ -13,7 +13,10 @@ def is_even(x):
     if not isinstance(x, int):
         raise TypeError('x must be an integer')
 
-    return True
+    if x % 2 == 0:
+        return True
+    else:
+        return False
 
 
 assert is_even.__doc__ is not None
@@ -27,3 +30,5 @@ except TypeError:
 assert raised_typeerror
 
 assert is_even(2)
+
+assert is_even(1) is False
