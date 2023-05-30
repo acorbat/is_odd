@@ -10,9 +10,10 @@ def is_even(x):
     -------
     : bool
         Returns True if x is even, else it returns False"""
-    pass
     if not isinstance(x, int):
         raise TypeError('x must be an integer')
+
+    return True
 
 
 assert is_even.__doc__ is not None
@@ -24,3 +25,5 @@ except TypeError:
     raised_typeerror = True
 
 assert raised_typeerror
+
+assert is_even(2)
